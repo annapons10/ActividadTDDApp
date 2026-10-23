@@ -16,7 +16,7 @@ namespace TestActividadTDDApp
         public void CalcularFactorial_DiferentesCasos(int n, long esperado)
         {
             long resultado = Funciones.CalcularFactorial(n);
-            Assert.Equals(resultado, esperado); 
+            Assert.AreEqual(resultado, esperado); 
         }
     }
 }
