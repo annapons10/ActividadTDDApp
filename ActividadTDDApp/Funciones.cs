@@ -4,9 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace ActividadTDDApp
 {
-    internal class Funciones
+    public class Funciones
     {
+
+        public static long CalcularFactorial(int numero)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
