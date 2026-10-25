@@ -27,21 +27,16 @@ namespace ActividadTDDApp
             return resultado;
         }
 
+        //Declaro las variables para usarlas en la función: 
+        private const int LONGITUD_MINIMA_CONTRASENYA = 8;
+        private const char CARACTER_OBLIGATORIO = '#';
+
         public static bool EsContrasenyaValida(string? contrasenya)
         {
-            if (contrasenya == null)
-                return false;
-
-            if (contrasenya == "")
-                return false;
-
-            if (contrasenya.Length < 8)
-                return false;
-
-            if (!contrasenya.Contains("#"))
-                return false;
-
-            return true;
+            //Aqui hago la evaluación de todas las condiciones para que pueda devolv o true o false. 
+            return !string.IsNullOrEmpty(contrasenya)
+            && contrasenya.Length >= LONGITUD_MINIMA_CONTRASENYA
+            && contrasenya.Contains(CARACTER_OBLIGATORIO);
         }
     }
 }
